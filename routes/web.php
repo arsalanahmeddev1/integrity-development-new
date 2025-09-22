@@ -20,7 +20,9 @@ Route::get('/dashboard', function () {
 
 
 // admin routes
-
+Route::get('/', function() {
+    return view('screens.superadmin.dashboard.index');
+})->name('admin.dashboard');
 
 
 // auth routes
