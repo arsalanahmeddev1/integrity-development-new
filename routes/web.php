@@ -21,7 +21,7 @@ Route::get('/dashboard', function () {
 
 // admin routes
 Route::get('/', function() {
-    return view('screens.superadmin.dashboard.index');
+    return view('screens.dashboards.superadmin');
 })->name('admin.dashboard');
 
 

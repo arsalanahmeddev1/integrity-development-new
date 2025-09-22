@@ -16,7 +16,6 @@
                 @yield('content')
             </div>
         </div>
-
     </div>
     @include('layouts.dashboard.partials.scripts')
 </body>
