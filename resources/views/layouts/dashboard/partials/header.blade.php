@@ -25,8 +25,18 @@
                 <i class="status_toggle middle sidebar-toggle" data-feather="align-center"></i>
             </div>
         </div>
+        <div class="col-xxl-5 col-xl-6 col-md-5 col-4">
+            <h3>
+                @php
+                    $user = Auth::user();
+                    $roleName = $user ? $user->getRoleNames()->first() : null;
+                @endphp
+                {{ $roleName ? \Illuminate\Support\Str::title(str_replace('_', ' ', $roleName)) : 'Dashboard' }}
+            </h3>
+        </div>
         <div class="nav-right col-xxl-7 col-xl-6 col-md-7 col-8 pull-right right-header p-0 ms-auto">
-            <ul class="nav-menus">
+            <ul class=
+            "nav-menus">
                 <li class="onhover-dropdown">
                     <div class="notification-box">
                         <svg>

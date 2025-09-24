@@ -13,6 +13,15 @@
             @include('layouts.dashboard.partials.sidebar')
             <div class="page-body">
                 @include('layouts.dashboard.partials.bread_crumbs')
+                {{-- @include('layouts.dashboard.partials.bread_crumbs', ['breadcrumbs' => $breadcrumbs ?? []]) --}}
+
+                {{-- @role('super_admin')
+                    @include('screens.dashboards.superadmin')
+                @endrole
+
+                @role('company_admin')
+                    @include('screens.dashboards.companyadmin')
+                @endrole --}}
                 @yield('content')
             </div>
         </div>

@@ -1,0 +1,6 @@
+.doted-list {
+    margin-bottom: 20px;
+}
+.doted-list li {
+    list-style: disc;
+}

@@ -47,4 +47,18 @@
 <script defer src="{{ asset('assets/libs/css/color-1.js') }}"></script>
 <script defer src="{{ asset('assets/libs/css/responsive.js') }}"></script>
 <script defer src="{{ asset('assets/libs/css/style.js') }}"></script>
-<title>@yield('title', 'Dashboard')</title>
+
+<title>
+    @hasSection('title')
+    @yield('title') || Integrity Development
+    @else
+    Dashboard | Integrity Development
+    @endif
+
+    @hasSection('page_heading')
+        @yield('page_heading')
+    @else
+        {{ $roleName ?? 'Dashboard' }}
+    @endif
+
+</title>
