@@ -1,15 +1,20 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SuperAdminController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware(['auth', 'role:super-admin'])->group(function () {
+    Route::get('/super-admin/dashboard', [SuperAdminController::class, 'index'])->name('super.dashboard');
+});
 
 
 // web routes
@@ -20,9 +25,9 @@ Route::get('/dashboard', function () {
 
 
 // admin routes
-Route::get('/', function() {
-    return view('screens.dashboards.superadmin');
-})->name('admin.dashboard');
+// Route::get('/', function() {
+//     return view('screens.dashboards.superadmin');
+// })->name('admin.dashboard');
 
 
 // auth routes

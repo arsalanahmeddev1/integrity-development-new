@@ -44,4 +44,16 @@ class AuthenticatedSessionController extends Controller
 
         return redirect('/');
     }
+
+
+    protected function redirectTo()
+    {
+        if (auth()->user()->hasRole('super_admin')) {
+            return '/dashboards/superadmin';
+        } elseif (auth()->user()->hasRole('company_admin')) {
+            return '/dashboards/companyadmin';
+        }
+
+        return '/'; // fallback
+    }
 }
