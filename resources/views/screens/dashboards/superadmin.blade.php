@@ -1,7 +1,13 @@
 @php
     $blogCount = 1;
+    $breadcrumbs = [
+        ['page_title' => 'Super Admin', 'url' => route('superadmin.dashboard')],
+        ['page_title' => 'Dashboard', 'url' => '#'],
+    ];
 @endphp
+@section('title', 'Dashboard')
 @extends('layouts.dashboard.master')
+@section('title', 'Super Admin Dashboard')
 @section('content')
     <div class="container-fluid default-dashboard">
         <div class="row widget-grid">
@@ -242,7 +248,8 @@
                                     <div class="widget-round warning">
                                         <div class="bg-round">
                                             <svg>
-                                                <use href="{{ asset('/assets/libs/svg/icon-sprite.svg#c-profit') }}"></use>
+                                                <use href="{{ asset('/assets/libs/svg/icon-sprite.svg#c-profit') }}">
+                                                </use>
                                             </svg><svg class="half-circle svg-fill">
                                                 <use href="{{ asset('/assets/libs/svg/icon-sprite.svg#halfcircle') }}">
                                                 </use>
