@@ -101,6 +101,9 @@
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
                         <li>
+                            <a href="{{ route('home') }}"><i data-feather="globe"></i><span>Website </span></a>
+                        </li>
+                        <li>
                             <a href="{{ route('profile.edit') }}"><i data-feather="user"></i><span>Edit Profile </span></a>
                         </li>
                         <li>

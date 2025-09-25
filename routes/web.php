@@ -14,7 +14,11 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 
 
 // web routes
-
+Route::get('/', fn() => view('screens.web.home.index'))->name('home');
+Route::get('/about-us', fn() => view('screens.web.about-us.index'))->name('about-us');
+Route::get('/key-features', fn() => view('screens.web.key-features.index'))->name('key-features');
+Route::get('/testimonials', fn() => view('screens.web.testimonials.index'))->name('testimonials');
+Route::get('/contact-us', fn() => view('screens.web.contact-us.index'))->name('contact-us');
 
 // user routes 
 
