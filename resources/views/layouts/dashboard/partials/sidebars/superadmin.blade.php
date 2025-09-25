@@ -2,7 +2,7 @@
                     
                     <li class="sidebar-list">
                         <i class="fa-solid fa-thumbtack"></i>
-                        <a href="{{ route('superadmin.companies.index') }}" class="sidebar-link sidebar-title link-nav">
+                        <a href="{{ route('admin.companies.index') }}" class="sidebar-link sidebar-title link-nav">
                             <svg class="stroke-icon">
                                 <use href="{{ asset('assets/libs/svg/icon-sprite.svg#stroke-blog') }}"></use>
                             </svg>

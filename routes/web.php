@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -19,19 +19,18 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// super admin routes
-Route::prefix('superadmin')->middleware(['auth', 'role:super_admin'])->group(function () {
-    Route::get('/dashboard', fn() =>  view('screens.dashboards.superadmin'))->name('superadmin.dashboard');
-    Route::get('/companies', fn() => view('screens.superadmin.companies.index'))->name('superadmin.companies.index');
+// admin routes
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
+    Route::get('/companies', fn() => view('screens.admin.companies.index'))->name('admin.companies.index');
     Route::get('/billing', fn() => view('screens.superadmin.billing.index'))->name('superadmin.billing.index');
     Route::get('/projects', fn() => view('screens.projects.index'))->name('superadmin.projects.index');
 });
 
 // company admin routes
-Route::prefix('companyadmin')->middleware(['auth', 'role:company_admin'])->group(function () {
-    Route::get('/dashboard', fn() => view('screens.dashboards.companyadmin'))->name('companyadmin.dashboard');
-    Route::get('/projects', fn() => view('screens.projects.index'))->name('companyadmin.projects.index');
-});
+// Route::prefix('companyadmin')->middleware(['auth', 'role:company_admin'])->group(function () {
+//     Route::get('/dashboard', fn() => view('screens.dashboards.companyadmin'))->name('companyadmin.dashboard');
+// });
 
 // common routes
 // Route::middleware(['auth', 'role_or_permission:super_admin|company_admin'])->group(function() {

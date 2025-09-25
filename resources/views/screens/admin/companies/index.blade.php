@@ -1,7 +1,7 @@
 @php
     $blogCount = 1;
     $breadcrumbs = [
-        ['page_title' => 'Super Admin', 'url' => route('superadmin.companies.index')],
+        ['page_title' => 'Super Admin', 'url' => route('admin.companies.index')],
         ['page_title' => 'Companies Management', 'url' => '#'],
     ];
 @endphp

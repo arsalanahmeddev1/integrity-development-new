@@ -1,10 +1,4 @@
 @php
-    $roles = Auth::user()->getRoleNames(); // Collection of roles
-    $currentRole = $roles->first() ?? 'user'; // first role or default
-    $dashboardRoute = $currentRole === 'super_admin' 
-        ? route('superadmin.dashboard') 
-        : route('companyadmin.dashboard');
-
     $breadcrumbs = [
         ['page_title' => 'Dashboard', 'url' => $dashboardRoute],
         ['page_title' => 'Projects', 'url' => '#'],
