@@ -1,6 +1,6 @@
 @php
     $breadcrumbs = [
-        ['page_title' => 'Dashboard', 'url' => $dashboardRoute],
+        ['page_title' => 'Super Admin', 'url' => route('admin.dashboard')],
         ['page_title' => 'Projects', 'url' => '#'],
     ];
 @endphp

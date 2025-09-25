@@ -7,7 +7,7 @@
                             </svg>
                             <svg class="fill-icon">
                                 <use href="{{ asset('assets/libs/svg/icon-sprite.svg#fill-blog') }}"></use>
-                                <span>Projects</span>
+                                <span>Company Profile</span>
                         </a>
                         {{-- <ul class="sidebar-submenu">
                             <li><a href="">Projects List</a></li>

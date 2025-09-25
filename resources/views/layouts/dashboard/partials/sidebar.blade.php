@@ -40,9 +40,8 @@
                     </div>
                 </li>
                 {{-- super admin menu start --}}
+                @include('layouts.dashboard.partials.sidebars.common')
                 @include('layouts.dashboard.partials.sidebars.superadmin')
-                {{-- super admin menu end --}}
-
                 {{-- company admin menu start --}}
                 @include('layouts.dashboard.partials.sidebars.companyadmin')
 
