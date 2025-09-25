@@ -101,19 +101,13 @@
                     </div>
                     <ul class="profile-dropdown onhover-show-div">
                         <li>
-                            <a href="sign-up.html"><i data-feather="user"></i><span>Account </span></a>
+                            <a href="{{ route('profile.edit') }}"><i data-feather="user"></i><span>Edit Profile </span></a>
                         </li>
                         <li>
-                            <a href="mail-box.html"><i data-feather="mail"></i><span>Inbox</span></a>
-                        </li>
-                        <li>
-                            <a href="task.html"><i data-feather="file-text"></i><span>Taskboard</span></a>
-                        </li>
-                        <li>
-                            <a href="add-user.html"><i data-feather="settings"></i><span>Settings</span></a>
-                        </li>
-                        <li>
-                            <a href="login.html"><i data-feather="log-in"> </i><span>Log out</span></a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i data-feather="log-in"> </i><span>Log out</span></button>
+                            </form>
                         </li>
                     </ul>
                 </li>
