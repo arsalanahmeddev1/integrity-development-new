@@ -1,11 +1,14 @@
 @php
-    $blogCount = 1;
+    $breadcrumbs = [
+        ['page_title' => 'Companyadmin', 'url' => route('companyadmin.dashboard')],
+        ['page_title' => 'Dashboard', 'url' => '#'],
+    ];
 @endphp
+@section('title', 'Dashboard')
 @extends('layouts.dashboard.master')
 @section('content')
     <div class="container-fluid default-dashboard">
         <div class="row widget-grid">
-            <h1>company dashboard</h1>
             {{-- <div class="col-xxl-4 col-sm-6 box-col-6">
                 <div class="card profile-box">
                     <div class="card-body">
@@ -74,7 +77,7 @@
                                         <span class="f-light">Total Companies</span>
                                         <h4>
                                             <span class="counter"
-                                                data-target="{{ $blogCount }}">{{ $blogCount }}</span>
+                                                {{-- data-target="{{ $blogCount }}">{{ $blogCount }}</span> --}}
                                         </h4>
                                     </div>
                                 </div>

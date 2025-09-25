@@ -113,7 +113,10 @@
                             <a href="add-user.html"><i data-feather="settings"></i><span>Settings</span></a>
                         </li>
                         <li>
-                            <a href="login.html"><i data-feather="log-in"> </i><span>Log out</span></a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="dropdown-item"><i data-feather="log-in"> </i><span>Log out</span></button>
+                            </form>
                         </li>
                     </ul>
                 </li>
